@@ -1,0 +1,68 @@
+.group::after {
+  clear: both;
+}
+
+h4 {
+  /*overflow: hidden;*/
+}
+div.wrapper {
+  align-items: center;
+}
+.sun {
+  content: url('sun.png');
+  -webkit-animation: sunSpin 16s linear infinite;
+  /*-webkit-animation-name: sunSpin;
+  -webkit-animation-duration: 16s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;*/
+}
+.rain {
+  content: url('rain.png');
+  -webkit-animation: sunSpin 16s linear infinite;
+}
+
+@-webkit-keyframes sunSpin {
+  100% {-webkit-transform: rotate(360deg);}
+}
+@keyframes sunSpin {
+  100% {-webkit-transform: rotate(360deg);}
+}
+.rain {
+  -webkit-animation: rain 16s linear infinite;
+  -moz-animation: rain 16s linear infinite;
+  -o-animation: rain 16s linear infinite;
+  animation: rain 16s linear infinite;
+}
+
+@-webkit-keyframes rain {
+  0% {
+    background: #0cf;
+    box-shadow: 0.625rem 0.875rem 0 -0.125rem rgba(255, 255, 255, 0.2), -0.875rem 1.125rem 0 -0.125rem rgba(255, 255, 255, 0.2), -1.375rem -0.125rem 0 #0cf;
+  }
+  25% {
+    box-shadow: 0.625rem 0.875rem 0 -0.125rem rgba(255, 255, 255, 0.2), -0.875rem 1.125rem 0 -0.125rem #0cf, -1.375rem -0.125rem 0 rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0.625rem 0.875rem 0 -0.125rem #0cf, -0.875rem 1.125rem 0 -0.125rem rgba(255, 255, 255, 0.2), -1.375rem -0.125rem 0 rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0.625rem 0.875rem 0 -0.125rem rgba(255, 255, 255, 0.2), -0.875rem 1.125rem 0 -0.125rem rgba(255, 255, 255, 0.2), -1.375rem -0.125rem 0 #0cf;
+  }
+}
+@keyframes rain {
+  0% {
+    background: #0cf;
+    box-shadow: 0.625rem 0.875rem 0 -0.125rem rgba(255, 255, 255, 0.2), -0.875rem 1.125rem 0 -0.125rem rgba(255, 255, 255, 0.2), -1.375rem -0.125rem 0 #0cf;
+  }
+  25% {
+    box-shadow: 0.625rem 0.875rem 0 -0.125rem rgba(255, 255, 255, 0.2), -0.875rem 1.125rem 0 -0.125rem #0cf, -1.375rem -0.125rem 0 rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0.625rem 0.875rem 0 -0.125rem #0cf, -0.875rem 1.125rem 0 -0.125rem rgba(255, 255, 255, 0.2), -1.375rem -0.125rem 0 rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0.625rem 0.875rem 0 -0.125rem rgba(255, 255, 255, 0.2), -0.875rem 1.125rem 0 -0.125rem rgba(255, 255, 255, 0.2), -1.375rem -0.125rem 0 #0cf;
+  }
+}
