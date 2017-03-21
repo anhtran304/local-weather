@@ -5,7 +5,6 @@ var dataMetric = true;
 var appId = "&APPID=061f24cf3cde2f60644a8240302983f2";
 var dataTemp = 0;
 var dataMainWeather = "";
-var items = ["rain", "sun", "drizzle", "clouds", "snow", "clear", "thunderstom"];
 
 var getRequest = $.getJSON('http://ipinfo.io', function (data) {
   dataQuery = data.city + ',' + data.country;
@@ -15,14 +14,9 @@ var getRequest = $.getJSON('http://ipinfo.io', function (data) {
 
   $.getJSON(queryWeather, function (res) {
     dataTemp = Math.round(res.main["temp"]);
-    // dataMainWeather = res.weather[0]["main"];
-    dataMainWeather = items[Math.floor(Math.random()*items.length)];
+    dataMainWeather = res.weather[0]["main"];
     $('#temp').text(dataTemp);
     $('#description').text(res.weather[0]["description"].capitalize());
-    console.log("The weather of " + dataQuery + " :");
-    console.log(res.weather[0]["main"].capitalize());
-    console.log(res.main["temp"]);
-    console.log("Random dataMainWeather: " + dataMainWeather.capitalize());
     getImgMainWeather(dataMainWeather.capitalize());
   });
 });
@@ -47,7 +41,6 @@ function changeUnits() {
     $('#label-units').text('F');
     $('#temp').text(dataTempF);
   }
-  console.log(dataMetric);
 }
 
 function getImgMainWeather(dataWeather) {
