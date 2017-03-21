@@ -8,6 +8,11 @@ h4 {
 div.wrapper {
   align-items: center;
 }
+
+.rain {
+  content: url('rain.png');
+}
+
 .sun {
   content: url('sun.png');
   -webkit-animation: sunSpin 16s linear infinite;
@@ -16,22 +21,35 @@ div.wrapper {
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;*/
 }
-.rain {
-  content: url('rain.png');
-  -webkit-animation: sunSpin 16s linear infinite;
+
+.drizzle {
+  content: url('sunandshower.png');
 }
+
+.clouds {
+  content: url('clouds.png');
+}
+
+.snow {
+  content: url('snow.png');
+}
+
+.clear {
+  content: url('clear.png');
+}
+
+.thunderstom {
+  content: url('thunderstom.png');
+}
+
+
 
 @-webkit-keyframes sunSpin {
   100% {-webkit-transform: rotate(360deg);}
 }
+
 @keyframes sunSpin {
   100% {-webkit-transform: rotate(360deg);}
-}
-.rain {
-  -webkit-animation: rain 16s linear infinite;
-  -moz-animation: rain 16s linear infinite;
-  -o-animation: rain 16s linear infinite;
-  animation: rain 16s linear infinite;
 }
 
 @-webkit-keyframes rain {
